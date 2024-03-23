@@ -4,6 +4,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
+    z-index: 9999;
 
     .background{
         background-color: black;
@@ -56,6 +57,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                color: black;
             }
 
             p{
