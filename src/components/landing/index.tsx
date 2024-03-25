@@ -1,11 +1,8 @@
-"use client"
 
-import { useRef, useLayoutEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import { slideUp, translate } from './animation';
+
 import { motion } from 'framer-motion';
 import styles from './style.module.scss';
+import { translate } from '../header/animation';
 
 export default function Landing() {
 
@@ -51,11 +48,9 @@ export default function Landing() {
         <div className={styles.landing}>
             <div className={styles.sliderContainer}>
                 <div className={styles.slider}>
-                    {/* <p>Frontend</p>
-                    <p>Mobile <br />Website</p>
-                    <p>Developers</p> */}
                     {text.map((t, i) => {
-                        return <motion.p>
+                        return <motion.p
+                        animate={'open'} >
                             {getChars(t)}
                         </motion.p>
                     })}

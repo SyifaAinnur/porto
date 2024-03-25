@@ -48,7 +48,8 @@ export default function Body({ links, selectedLink, setSelectedLink }: BodyProps
                             onMouseOver={() => { setSelectedLink({ isActive: true, index }) }}
                             onMouseLeave={() => { setSelectedLink({ isActive: false, index }) }}
                             variants={blur}
-                            animate={selectedLink.isActive && selectedLink.index !== index ? "open" : "closed"}>
+                            animate={selectedLink.isActive && selectedLink.index !== index ? "open" : "closed"}
+                            >
                             {getChars(title)}
                         </motion.p>
                     </Link>
