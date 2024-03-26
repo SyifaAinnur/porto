@@ -1,15 +1,28 @@
 'use client';
 import styles from './style.module.scss';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { opacity, background } from './animation';
 import Nav from '@/components/header/nav';
+import { usePathname, useRouter } from 'next/navigation';
+import { animatePageIn, animatePageOut } from '@/utils/animation';
 
 
 export default function index() {
 
     const [isActive, setIsActive] = useState(false);
+    const pathname = usePathname()
+    const router = useRouter();
+
+    useEffect(() => {
+        if (pathname) {
+            setIsActive(false)
+            setTimeout(() => {
+                animatePageIn();
+            }, 1000)
+        }
+    }, [pathname])
 
     return (
         <div className={styles.header}>

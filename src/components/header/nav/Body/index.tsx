@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from './style.module.scss';
 import { blur, translate } from '@/components/header/animation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface LinkData {
     title: string;
@@ -37,6 +38,8 @@ export default function Body({ links, selectedLink, setSelectedLink }: BodyProps
         })
         return chars;
     }
+    const router = useRouter()
+    const pathname = usePathname();
 
     return (
         <div className={styles.body}>
