@@ -46,7 +46,7 @@ export default function Landing() {
 
     return (
         <div className={styles.landing}>
-            <div className={styles.sliderContainer}>
+            <div className='flex items-center justify-center'>
                 <div className={styles.slider}>
                     {text.map((t, i) => {
                         return <motion.p

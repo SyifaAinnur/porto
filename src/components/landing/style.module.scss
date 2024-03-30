@@ -11,11 +11,20 @@
         // position: absolute;
         // top: calc(100vh - 350px);
         // left: 50%;
-        position: absolute;
+        // position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
+    }
+
+    @media screen and (max-width: 768px) {
+        .sliderContainer {
+            top: 50%;
+            left: 50%;
+            transform: translate(-42%, -50%);
+        }
+      
     }
 
     .slider{
@@ -41,10 +50,13 @@
       }
 
 
+
+
     @media screen and (max-width: 768px) {
         .slider p{
-            font-size: 50px;
+            font-size: 45px;
            line-height: 50px;
+           padding-right: 0px;
         }
       
     }

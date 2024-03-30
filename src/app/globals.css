@@ -32,7 +32,17 @@ body {
   }
 } */
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: visible;
+}
 
+@media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  
+}
 
 body{
   margin: 0px;

@@ -2,6 +2,7 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { opacity, slideUp } from "./animation";
 import styles from './style.module.scss';
+import RoundedButton from "../common/RoundedButton";
 
 export default function Description() {
 
@@ -12,15 +13,17 @@ export default function Description() {
         <div ref={description} className={styles.description}>
             <div className={styles.body}>
                 <p>
-                {
-                    phrase.split(" ").map( (word, index) => {
-                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
-                    })
-                }
+                    {
+                        phrase.split(" ").map((word, index) => {
+                            return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        })
+                    }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
-                    <p>About ME</p>
+                    <RoundedButton className={styles.button}>
+                        <p>About me</p>
+                    </RoundedButton>
                 </div>
             </div>
         </div>
