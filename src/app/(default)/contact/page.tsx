@@ -3,12 +3,13 @@
 import TextDisperse from '@/components/textDisperse';
 import styles from './style.module.scss';
 import { useRef } from 'react';
+import gsap from 'gsap';
 
 export default function Contact() {
     const background = useRef(null);
 
     const setBackground = (isActive: any) => {
-        gsap.to(background.current, { opacity: isActive ? 0.8 : 0 })
+        gsap?.to(background.current, { opacity: isActive ? 0.8 : 0 })
     }
 
     return (
@@ -16,30 +17,31 @@ export default function Contact() {
             <div className={styles.body}>
 
                 <div className={styles.introLine}>
-                    <p>Olivier</p>
-                    <p>Larose</p>
+                    <p>Syifa</p>
+                    <p>Ainnur</p>
                 </div>
 
                 <div className={styles.introLine}>
-                    <p>Design</p>
+                    <p>Frontend</p>
+                    <p>Dev</p>
+                </div>
+
+                <div className={styles.introLine}>
+                    <p>Website</p>
                     <p>&</p>
+                    <p>Mobile</p>
                 </div>
 
-                <div className={styles.introLine}>
-                    <p>Art</p>
-                    <p>Direction</p>
-                </div>
-
-                <TextDisperse setBackground={setBackground}>
-                    <p>+447533063596</p>
+                <TextDisperse setBackground={setBackground} styles={styles.introLine} link='https://www.linkedin.com/in/syifaainnurmanzila/'>
+                    <p>→Linkedin</p>
                 </TextDisperse>
 
-                <TextDisperse setBackground={setBackground}>
+                <TextDisperse setBackground={setBackground} styles={styles.introLine} link='mailto:syifaainnurmanzila@gmail.com'>
                     <p>→Email</p>
                 </TextDisperse>
 
-                <TextDisperse setBackground={setBackground}>
-                    <p>→Insta</p>
+                <TextDisperse setBackground={setBackground} styles={styles.introLine} link='https://github.com/SyifaAinnur'>
+                    <p>→Github</p>
                 </TextDisperse>
 
             </div>

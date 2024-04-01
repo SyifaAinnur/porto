@@ -20,7 +20,7 @@ export default function index() {
             setIsActive(false)
             setTimeout(() => {
                 animatePageIn();
-            }, 1000)
+            }, 500)
         }
     }, [pathname])
 
