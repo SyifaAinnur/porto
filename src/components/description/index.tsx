@@ -6,7 +6,7 @@ import RoundedButton from "../common/RoundedButton";
 
 export default function Description() {
 
-    const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    const phrase = "Develop a website/mobile that is not only beautiful but also functional and user-friendly.";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -19,12 +19,9 @@ export default function Description() {
                         })
                     }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
-                    <RoundedButton className={styles.button}>
-                        <p>About me</p>
-                    </RoundedButton>
-                </div>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
+                    I am a frontend developer with a passion for creating beautiful and functional websites. I am always looking for new challenges and opportunities to learn and grow. 
+                </motion.p>
             </div>
         </div>
     )

@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Preload from '@/components/preload';
 import Landing from '@/components/landing';
 import Description from '@/components/description';
+import Project from '@/components/projects';
 
 export default function Home() {
 
@@ -33,6 +34,7 @@ export default function Home() {
         </AnimatePresence>
         {!isLoading &&<Landing />}
         <Description />
+        <Project />
     </main>
   );
 }
