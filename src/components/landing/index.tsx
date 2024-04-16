@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import styles from './style.module.scss';
 import { translate } from '../header/animation';
+import Line from '../line';
 
 export default function Landing() {
 
@@ -24,12 +25,12 @@ export default function Landing() {
     //     })
     // }, [])
 
-    const text = ["Frontend", "Mobile", "Website", "Developers"];
+    const text = ["FOLIO OF SIFF", "FRONT-END", "DEVELOPER"];
 
 
     const getChars = (word: string) => {
         let chars: JSX.Element[] = [];
-        word.split("").forEach((char, i) => {
+        word.split(",").forEach((char, i) => {
             chars.push(
                 <motion.span
                     custom={[i * 0.02, (word.length - i) * 0.01]}
@@ -49,10 +50,13 @@ export default function Landing() {
             <div className='flex items-center justify-center'>
                 <div className={styles.slider}>
                     {text.map((t, i) => {
-                        return <motion.p
-                        animate={'open'} >
-                            {getChars(t)}
-                        </motion.p>
+                        return <>
+                            <motion.p
+                                animate={'open'} >
+                                {getChars(t)}
+                            </motion.p>
+                            <Line key={i} />
+                        </>
                     })}
                 </div>
             </div>
